@@ -15,8 +15,8 @@ const listingSchema = new Schema({
   },
   url: {
     type: String,
-    default: "https://unsplash.com/photos/silhouette-photography-of-coconut-palm-trees-CSs8aiN_LkI",
-  },
+    default: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200",
+},
 },
   price: Number,
   location: String,
