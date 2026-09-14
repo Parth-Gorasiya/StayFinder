@@ -58,33 +58,33 @@ reviews, and explore listing locations through interactive Mapbox maps.
 
 ## Tech Stack
 
-  -----------------------------------------------------------------------
-  Layer                               Technologies
-  ----------------------------------- -----------------------------------
-  Backend                             Node.js, Express.js
+  ---------------------------------------------------------------------
+  Layer                              Technologies
+  ---------------------------------- ----------------------------------
+  Backend                            Node.js, Express.js
 
-  Views and UI                        EJS, EJS-Mate, Bootstrap, CSS,
-                                      JavaScript
+  Views and UI                       EJS, EJS-Mate, Bootstrap, CSS,
+                                     JavaScript
 
-  Database                            MongoDB Atlas, Mongoose
+  Database                           MongoDB Atlas, Mongoose
 
-  Authentication                      Passport.js, Passport Local,
-                                      passport-local-mongoose
+  Authentication                     Passport.js, Passport Local,
+                                     passport-local-mongoose
 
-  Sessions                            express-session, connect-mongo
+  Sessions                           express-session, connect-mongo
 
-  Validation                          Joi
+  Validation                         Joi
 
-  File uploads                        Multer, multer-storage-cloudinary
+  File uploads                       Multer, multer-storage-cloudinary
 
-  Image hosting                       Cloudinary
+  Image hosting                      Cloudinary
 
-  Maps and geocoding                  Mapbox
+  Maps and geocoding                 Mapbox
 
-  Messaging                           connect-flash
+  Messaging                          connect-flash
 
-  Hosting                             Render
-  -----------------------------------------------------------------------
+  Hosting                            Render
+  ---------------------------------------------------------------------
 
 ## Architecture
 
@@ -185,45 +185,53 @@ Open `http://localhost:8080/listings`.
 
 ## Route Overview
 
-  -----------------------------------------------------------------------------------------
-  Method            Endpoint                            Purpose           Access
-  ----------------- ----------------------------------- ----------------- -----------------
-  GET               `/listings`                         Browse listings   Public
+  --------------------------------------------------------------------------------
+  Method        Endpoint                            Purpose        Access
+  ------------- ----------------------------------- -------------- ---------------
+  GET           `/listings`                         Browse         Public
+                                                    listings       
 
-  GET               `/listings/new`                     Display           Login required
-                                                        new-listing form  
+  GET           `/listings/new`                     Display        Login required
+                                                    new-listing    
+                                                    form           
 
-  POST              `/listings`                         Create a listing  Login required
+  POST          `/listings`                         Create a       Login required
+                                                    listing        
 
-  GET               `/listings/:id`                     View listing,     Public
-                                                        reviews, and map  
+  GET           `/listings/:id`                     View listing,  Public
+                                                    reviews, and   
+                                                    map            
 
-  GET               `/listings/:id/edit`                Display edit form Owner only
+  GET           `/listings/:id/edit`                Display edit   Owner only
+                                                    form           
 
-  PUT               `/listings/:id`                     Update a listing  Owner only
+  PUT           `/listings/:id`                     Update a       Owner only
+                                                    listing        
 
-  DELETE            `/listings/:id`                     Delete a listing  Owner only
+  DELETE        `/listings/:id`                     Delete a       Owner only
+                                                    listing        
 
-  POST              `/listings/:id/reviews`             Add a review      Login required
+  POST          `/listings/:id/reviews`             Add a review   Login required
 
-  DELETE            `/listings/:id/reviews/:reviewId`   Delete a review   Review author
-                                                                          only
+  DELETE        `/listings/:id/reviews/:reviewId`   Delete a       Review author
+                                                    review         only
 
-  GET               `/signup`                           Display signup    Public
-                                                        form              
+  GET           `/signup`                           Display signup Public
+                                                    form           
 
-  POST              `/signup`                           Register an       Public
-                                                        account           
+  POST          `/signup`                           Register an    Public
+                                                    account        
 
-  GET               `/login`                            Display login     Public
-                                                        form              
+  GET           `/login`                            Display login  Public
+                                                    form           
 
-  POST              `/login`                            Authenticate a    Public
-                                                        user              
+  POST          `/login`                            Authenticate a Public
+                                                    user           
 
-  GET               `/logout`                           End the current   Authenticated
-                                                        session           session
-  -----------------------------------------------------------------------------------------
+  GET           `/logout`                           End the        Authenticated
+                                                    current        session
+                                                    session        
+  --------------------------------------------------------------------------------
 
 ## Authentication and Authorization
 
